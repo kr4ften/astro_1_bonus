@@ -1,0 +1,43 @@
+1)
+Stellar initial mass: 1.69
+Effective temperature: approx 6200 K
+Luminosity: LogL = 0.5  =>   L/L_sun = 3.16  =>  L = 1.216 * 10^27 W/m^2
+
+2)
+Stellar initial mass: 2.45
+Effective temperature: approx 6100 K (logTe = 3.71)
+Luminosity: LogL = 0.575    =>  L/L_sun = 3.758     => L = 1.4461 * 10^27 W/m^2
+
+----
+
+3)
+More stars have deviated from the main sequence, the turnoff point has moved lower in temperature.
+
+Reason: This cluster is significantly older, thus more stars have expended their fuel and turned into red giants.
+
+4)
+By plotting 10.3e9y, 11.0e9y and 9.0e9y
+
+10.3e9y aligns best with our sun. at the turn off point the stars have Mini of about 1 solar mass
+
+5)
+Plotted as 4.69e9_vs_10.3e9y.png
+
+6)
+More hot stars remain on the main sequence than in the isochrone with lower metallicity
+
+The cluster would appear bluer if we were to observe it with our eyes.
+
+7)
+Stellar initial mass: 1.69
+Effective temperature: approx 8050 K
+Luminosity: LogL = 0.82  =>   L/L_sun = 6.607  =>  L = 2.542 * 10^27 W/m^2
+
+8a)
+The star with lower metallicity will spend longer on the main sequence, it will have a longer life-span.
+
+8b)
+???
+
+9)
+
