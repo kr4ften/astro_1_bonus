@@ -1,0 +1,165 @@
+\documentclass[11pt,a4paper]{article}
+% Locale and font
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel} % Set language here
+
+% Layout
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage[margin=1cm]{caption} % Additional margin for captions
+\usepackage{geometry}
+\geometry{margin=1.25in} % Margin for dokument (default in Word is 1.25 inches)
+
+\setlength{\parskip}{1em} % Skip for paragraphs
+\setlength{\parindent}{0em} % Indentation for paragraphs
+
+\usepackage[dvipsnames]{xcolor} % Color
+
+% #########################
+% Citations
+\bibliographystyle{unsrt} % Set reference system here
+
+% #########################
+% Math
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{textgreek}
+\usepackage{mathrsfs}
+
+% #########################
+% Physics/Chemistry
+%   Chemical and nuclear reactions
+%\usepackage[version=4]{mhchem} 
+
+% Tables and plots
+%   Figures
+\usepackage{tikz}
+\usepackage{svg}
+\usepackage{graphicx}
+\usepackage{subcaption}
+
+%   Nicer tables
+\usepackage{booktabs}
+
+% #########################
+% Text information
+\newcommand{\Foursename}{Astrophysics 1} % Set course name here
+\newcommand{\Fassignment}{Mandatory 4} % Set assignment title here
+\newcommand{\Foursecode}{\texttt{1FA204}} % Set course code here
+\newcommand{\Fauthor}{Oliver Kraft} % Set author here
+\newcommand{\Femail}{oliver.kraft.9720@student.uu.se} % Set email here
+\newcommand{\Fersonalnumber}{20010609-XXXX}
+\date{December 2021} % Set date here
+
+%   Parameters for use in text
+\title{\Foursename\, -\, \Fassignment}
+\author{\Fauthor}
+
+% #########################
+% Header and footer
+\usepackage{fancyhdr}
+
+\lhead{\Foursecode}
+\chead{\href{mailto:\Femail}{\texttt{\textcolor{lightgray}{\Femail}}}}
+\rhead{\texttt{\Fauthor}}
+\setlength{\headheight}{15pt}
+
+\rfoot{\texttt{Page \thepage}} % Page text can be adjusted here
+\lfoot{}
+\cfoot{}
+
+\fancypagestyle{plain}{
+    \fancyfoot{} % Remove footer
+}
+
+\pagestyle{fancy}
+
+% #########################
+% Miscelaneous
+\usepackage{pdfpages} % Include a whole pdf with \includepdf[pages=-]{file.pdf}
+
+
+
+% Code test:
+\usepackage{minted}
+
+\begin{document}
+    \section*{\Fassignment}
+    \subsection*{Developing a classification scheme}
+
+    My thinking when developing the classification system was to two properties, the shape of the bulge and how well-defined the shape of the perimeter is.
+
+    The bulge shapes where grouped into two apparent shapes, elongated and circular.
+    Note that the bulges of elliptical galaxies in Hubble's system have a largely spherical bulge as the orbits of the stars should be in quite random orientations.
+    Spiral galaxies in Hubble's system have disk-like bulges.
+    This means that the classification system does indeed say something about the true shape of the bulges for elliptical galaxies, ellipsoids will appear elliptical in the images.
+    However, spiral galaxies will be more complicated and the simple classification below is probably not that accurate in describing them because of perspective.
+    A circular disk can appear elliptical/elongated if viewed off axis.
+
+    Based of the perimeter I created two categories, elliptical and irregular.
+    Irregulars have bumps jutting out from a central disk or ''cloud`` of stars, for instance from spiral arms, which create the appearance bumps on their perimeter.
+    Whilst the elliptical group only has a disk/''cloud`` and a solid perimeter, even if the brightness varies a bit.
+    Note that even spiral galaxies can have solid perimeter so long as the luminosity of the stars surrounding the arms is high enough to create the appearance of a continuous perimeter.
+
+
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{lll}
+            Kraft category & Defining characteristic              & Galaxy ID no:s      \\ \hline
+            Category I   & Elongated bulge, elliptical perimeter & 2, 3, 6, 10, 11, 15 \\ \hline
+            Category II  & Elongated bulge, irregular perimeter & 4, 14               \\ \hline
+            Category III & Circular bulge, elliptical perimeter  & 5, 7, 8, 12         \\ \hline
+            Category IV  & Circular bulge, irregular perimeter   & 1, 9, 13
+        \end{tabular}\label{tab:mySystem}
+    \end{table}
+
+    \subsection*{Applying Hubble's classification scheme}
+    
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{lll}
+            Hubble category & Defining characteristic                                                                                                     & Galaxy ID no:s      \\ \hline
+            E               & \begin{tabular}[c]{@{}l@{}}No spiral structure, varying \\ elongation from round to almost straight\end{tabular}            & 3, 5, 6, 10, 11, 12 \\ \hline
+            S               & \begin{tabular}[c]{@{}l@{}}Spiraling arms stretching out from the nucleus, \\ reminiscent of a whirlpool\end{tabular}          & 1, 8, 9, 13, 15     \\ \hline
+            SB              & \begin{tabular}[c]{@{}l@{}}Straight bars stretching out from the nucleus \\ which veer off into spiral-esque arms\end{tabular} & 2, 4, 14            \\ \hline
+            Irr             & \begin{tabular}[c]{@{}l@{}}No obvious bulge in the centre or lacking \\ spiral structure.\end{tabular}                        & 7
+        \end{tabular}\label{tab:hubbleSystem}
+    \end{table}
+
+    \subsection*{Questions}\label{subsec:questions}
+
+    \textbf{1} \textit{Unless there is an underlying model, classification systems are completely arbitrary as long as the defining characteristics are clear to everyone.  Which of the two systems, yours or Hubble’s, do you/does your group prefer?  Why? }
+
+    I prefer Hubble's system, I believe it is less affected by perspective than my system whilst giving more information about the galaxies shape.
+    I do find parts of Hubble's system strange though, I don't quite like the undefined border between barred spirals and spirals.
+    The mere existence of the barred spiral category suggests they are quite numerous.
+    However, I can't shake the feeling that Sc-types appear so similar to barred spirals that perhaps it would make more sense to classify based on how elongated the center appears, allowing Sc to fall under the same category as the Barred spirals.
+    It might be that there are fundamentally different processes which cause the unwinding of Sc and the bars of barred spirals, in that case I suppose separating them makes sense.
+    
+    \textbf{2} \textit{Hubble viewed the tuning fork diagram as representing an evolutionary sequence for galaxies.  Using the tuning fork diagram, propose an evolutionary sequence for galaxies}
+
+    Edward Hubble's proposed evolutionary sequence was from elliptical galaxies into spiral galaxies.
+    I however like the idea of a reversed sequence from that, whereby galaxies form as spirals or barred spirals depending on the environment/process in which they form.
+    Over time they would then evolve as their arms wind up towards the central bulge.
+    Once the arms have joined the bulge they would become an elliptical galaxy.
+
+    The main reason I think this order would make more sense than Hubble's is that I feel like it gives a natural way for galaxies to die out.
+    Since spiral galaxies have a significantly higher rate of star formation than ellipticals it makes more sense that they would be the final stage, in my mind at least.
+    It also aligns with the fact that stars in eliptial galaxies tend to be redder, older stars with little to no starformation.
+    Hubble's system proposes that star formation increases as galaxies age when they go from spiral into elliptical and gives no indication as to what they evolve into afterwards.
+
+    However I don't have any idea as to how the ''wind up`` of the arms into the central bulge would work.
+    The kinetic energy of all the stars orbiting the bulge would have to end up somewhere and I can't even imagine anything which would cause that.
+    The ''flatness`` of the central disk of spiral galaxies is also a clear problem in this case as the bulges in elliptical galaxies have randomly oriented orbits, in a disk the orbits are laid out flat in a relatively narrow plane.
+    Again, I don't see what could cause the oriantations of the orbits of stars in a disk to change such that it becomes more similar to the bulge of an elliptical galaxy.
+    
+    \textbf{3} \textit{Astronomers now realize that the tuning fork diagram does not represent an evolutionary sequence.  Does this mean that Hubble’s scheme is useless?  Explain.}
+
+    No it does not.
+    Whilst the categories in Hubble's system don't correspond to distinct stages in the evolution of galaxies each of the categories still consist of galaxies with similar appearances.
+    The similarity in appearance probably implies a similarity in properties, and thus being able to study them as groups is probably useful.
+    And significantly easier than to study every galaxy individually.
+
+\end{document}
